@@ -14,16 +14,21 @@
         <h2>Vacation Contest Sign-Up Form</h2>
         <form method="GET" action="results.html">
             <div>
-                <label for="firstname">Your First Name</label>
-                <input type="text" id="firstname" name="firstname">
-                <label for="lastname">Your Last Name</label>
-                <input type="text" id="lastname" name="lastname">
+                <!--Name Inputs, MinLength/MaxLength, Required Field-->
+                <label for="firstname"><span class="required-field">*</span>Your First Name</label>
+                <input type="text" minlength="2" maxlength="35" id="firstname" name="firstname" required />
+                <label for="lastname"><span class="required-field">*</span>Your Last Name</label>
+                <input type="text" minlength="2" maxlength="35" id="lastname" name="lastname" required />
+                <!--Age Input, Min Age 21, Required Field-->
+                <label for="age"><span class="required-field">*</span>Your Age</label>
+                <input type="number" min="21" max="120" id="age" name="age" required />
+                <h5>Participants must be at least 21 years of age to enter the contest.</h5>
             </div>
             <fieldset>
                 <legend>Your Contact Info</legend>
                 <div>
-                    <label for="email">Your Email</label>
-                    <input type="email" id="email" name="email">
+                    <label for="email"><span class="required-field">*</span>Your Email</label>
+                    <input type="email" id="email" name="email" required />
                 </div>
                 <div>
                     <label for="address">Your Street Address</label>
@@ -86,7 +91,8 @@
                         <option value="WY">Wyoming</option>
                     </datalist>
                     <label for="zip">Your Zipcode</label>
-                    <input type="text" id="zip" name="zip">
+                    <!--Zip Code Pattern Added-->
+                    <input type="text" pattern="[0-9]{5}" id="zip" name="zip" title="5-Digit US Zip Code">
                 </div>
             </fieldset>
 
@@ -129,6 +135,11 @@
                 <div>
                     <input type="checkbox" id="drinks" name="extras" value="Drinks Package"> 
                     <label for="drinks">All-inclusive Drinks Package</label>
+                </div>
+                <!--Password, Required Field-->
+                <div>
+                    <label for="pwd"><span class="required-field">*</span>Your Secret Code (must be 6 alphanumeric characters)</label>
+                    <input type="password" pattern="[a-zA-Z0-9]{6}" id="psw" name="psw" title="6 Alphanumeric Character Passcode" required />
                 </div>
             </fieldset>
             
