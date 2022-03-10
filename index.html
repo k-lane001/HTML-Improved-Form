@@ -19,7 +19,7 @@
                 <input type="text" minlength="2" maxlength="35" id="firstname" name="firstname" required />
                 <label for="lastname"><span class="required-field">*</span>Your Last Name</label>
                 <input type="text" minlength="2" maxlength="35" id="lastname" name="lastname" required />
-                <!--Age Input, Min Age 21, Required Field-->
+                <!--Age Input, Min Age 21/Max Age 120, Required Field-->
                 <label for="age"><span class="required-field">*</span>Your Age</label>
                 <input type="number" min="21" max="120" id="age" name="age" required />
                 <h5>Participants must be at least 21 years of age to enter the contest.</h5>
@@ -27,6 +27,7 @@
             <fieldset>
                 <legend>Your Contact Info</legend>
                 <div>
+                    <!--Email Required Field-->
                     <label for="email"><span class="required-field">*</span>Your Email</label>
                     <input type="email" id="email" name="email" required />
                 </div>
@@ -91,7 +92,7 @@
                         <option value="WY">Wyoming</option>
                     </datalist>
                     <label for="zip">Your Zipcode</label>
-                    <!--Zip Code Pattern Added-->
+                    <!--Zip Code Pattern Added with Title-->
                     <input type="text" pattern="[0-9]{5}" id="zip" name="zip" title="5-Digit US Zip Code">
                 </div>
             </fieldset>
@@ -136,7 +137,7 @@
                     <input type="checkbox" id="drinks" name="extras" value="Drinks Package"> 
                     <label for="drinks">All-inclusive Drinks Package</label>
                 </div>
-                <!--Password, Required Field-->
+                <!--Password, Required Field, Regex Pattern-->
                 <div>
                     <label for="pwd"><span class="required-field">*</span>Your Secret Code (must be 6 alphanumeric characters)</label>
                     <input type="password" pattern="[a-zA-Z0-9]{6}" id="psw" name="psw" title="6 Alphanumeric Character Passcode" required />
